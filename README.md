@@ -1,2 +1,2 @@
-# Proiect Tehnici Web 1
- Blog personal
+# Proiect Tehnici Web 2
+Javascript
