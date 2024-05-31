@@ -1,0 +1,23 @@
+body{
+    background-image: url('reviews.jpg');
+    background-repeat: no-repeat;
+    background-size: 110%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#welcome, #welcomep{
+    color:white;
+}
+
+.centered-text {
+    color: white;
+    text-shadow: 2px 2px 0 black, -2px -2px 0 black, -2px 2px 0 black, 2px -2px 0 black;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+    margin-top: 3%;
+    text-align: center;
+}

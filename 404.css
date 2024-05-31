@@ -1,0 +1,7 @@
+body{
+    background-image: url('404-error.png');
+    background-size: 90%;
+    background-position-y:10%;
+    background-position-x: 10%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
