@@ -1,0 +1,388 @@
+body{
+    background-image: url('wkbg.png');
+    background-color:black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    animation: menu 6s linear infinite;
+
+}
+.itm {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s;
+    margin: 0 15px;
+}
+
+#textInput, #But, #textDisplay{
+    animation: apare 1s ease-in;
+}
+
+.highlight{
+    text-decoration: underline;
+}
+
+.itm:hover {
+    color: orange;
+}
+.stim {
+
+    
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s;
+
+}
+.stim:hover{
+    color:red;
+}
+.submenu-container {
+    position: relative;
+    transition: transform 0.8s;
+}
+
+.submenu-content {
+
+    display:flex;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: none;
+    position: absolute;
+    left: 10%;
+    top: 100%;
+    background-color: transparent;
+    padding: 10px;
+    animation: coboara 0.7s ease forwards;
+}
+
+.submenu-container:hover .submenu-content {
+    display: block;
+    opacity: 1;
+}
+
+.workouts-container{
+    position:relative;
+    transition: transform 0.8s;
+}
+.workouts-content{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: none;
+    position: absolute;
+    left: 28%;
+    top: 100%;
+    background-color: transparent;
+    padding: 10px;
+    animation: coboara 0.7s ease forwards;
+    text-align: center;
+}
+.workouts-container:hover .workouts-content{
+    display: block;
+}
+
+
+@keyframes coboara{
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.contact-container{
+    position:relative;
+    transition: transform 0.8s;
+}
+.contact-content{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: none;
+    position: absolute;
+    left: 15%;
+    top: 100%;
+    background-color: transparent;
+    padding: 10px;
+    animation: coboara 0.7s ease forwards;
+    text-align: center;
+}
+
+
+.contact-container:hover .contact-content{
+    display: block;
+    opacity: 1;
+}
+
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 60px;
+    margin-top: 10%;
+    animation: apare 1s;
+}
+.image-container img{
+    max-width: 270px;
+    transition: transform 0.3s ease;
+}
+
+
+.image-container img:hover{
+    transform: scale(1.5);
+}
+.image-container img:hover+p{
+    opacity: 1;
+    animation: apare 0.2s ease-in;
+}
+.image-container p{
+
+    text-align: center;
+    opacity: 0;
+    color:white;
+    margin-top: 15%;
+    font-size: 40px;
+    font-weight: bold;
+    
+}
+.image-container a{
+    text-decoration: none;
+}
+@keyframes apare {
+    0%{
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#jos{
+    color:white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    padding-top: 3%;
+    font-weight: bold;
+    animation: apare 1s ease-in;
+}
+#jos1{
+    color:rgb(10, 225, 245);
+    font-weight: bold;
+    text-decoration: line-through;
+    animation: eu 3s infinite;
+}
+#workouts{
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: -5%;
+    font-size: 130px;
+    font-weight: bold;
+    color:white;
+    animation: apare 1s ease-in, wave 3s linear infinite;
+}
+@keyframes eu{
+    0%{
+        filter:hue-rotate(0deg);
+    }
+    100%{
+        filter:hue-rotate(360deg);
+    }
+}
+
+@keyframes wave{
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+@media (max-width: 60em) {
+    
+    body{
+        background-color: black;
+        background-position: center;
+        background-size: 500%;
+    }
+        
+    nav{
+        padding: 40px;
+        top:0;
+    }
+    
+    .itm {
+    
+        font-size: 15px;
+        margin: 0 5px;
+    
+    }
+    
+    .stim {
+    
+        font-size: 10px;
+        color: white;
+        text-decoration: none;
+        transition: color 0.5s;
+    
+    }
+    
+    .submenu-content {
+    
+        left: 10%;
+        top: 100%;
+        background-color: transparent;
+        padding: 0px;
+        animation: coboara 0.7s ease forwards;
+    }
+    
+    .workouts-content{
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        display: none;
+        position: absolute;
+        left: 35%;
+        top: 100%;
+        background-color: transparent;
+        padding: 0px;
+        animation: coboara 0.7s ease forwards;
+        text-align: center;
+    }
+    
+    @keyframes coboara{
+        0% { opacity: 0; 
+            transform: translateY(-5px); 
+        }
+        100% { 
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+    }
+    .contact-content{
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        display: none;
+        position: absolute;
+        left: 15%;
+        top: 100%;
+        background-color: transparent;
+        padding: 0px;
+        animation: coboara 0.7s ease forwards;
+        text-align: center;
+    }
+
+    
+.image-container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    gap: 20px;
+    margin:auto;
+    margin-left: 2%;
+    margin-top: 40%;
+    animation: apare 1s;
+}
+.image-container img{
+    max-width: 70px;
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover{
+    transform: scale(1.5);
+}
+.image-container p{
+
+    text-align: center;
+    opacity: 0;
+    color:white;
+    margin-top: 15%;
+    font-size: 10px;
+    font-weight: bold;
+    
+}
+@keyframes apare {
+    0%{
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+#workouts{
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: 120%;
+    font-size: 50px;
+    font-weight: bold;
+    color:white;
+    animation: apare 1s ease-in, wave 3s linear infinite;
+}
+
+#jos{
+    font-size: 10px;
+    bottom: 0;
+    padding-top: 30%;
+
+}
+
+@keyframes wave2{
+     0%{
+       transform:  translateX(-5px);
+    }
+    50%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(-5px);
+    }
+}
+    
+    @keyframes wave{
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    }

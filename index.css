@@ -1,0 +1,354 @@
+body{
+    background-image: url('wp.png');
+    background-color:black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#oraCurenta, #ora{
+    animation: apare 1.5s ease-in;
+}
+
+nav{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    animation: menu 6s linear infinite;
+
+}
+
+.highlight{
+    text-decoration: underline;
+}
+
+.itm {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s;
+    margin: 0 15px;
+}
+
+.itm:hover {
+    color: orange;
+}
+.stim {
+
+    
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s;
+
+}
+.stim:hover{
+    color:red;
+}
+.submenu-container {
+    position: relative;
+    transition: transform 0.8s;
+}
+
+.submenu-content {
+
+    display:flex;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: none;
+    position: absolute;
+    left: 10%;
+    top: 100%;
+    background-color: transparent;
+    padding: 10px;
+    animation: coboara 0.7s ease forwards;
+}
+
+.submenu-container:hover .submenu-content {
+    display: block;
+    opacity: 1;
+}
+
+.workouts-container{
+    position:relative;
+    transition: transform 0.8s;
+}
+.workouts-content{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: none;
+    position: absolute;
+    left: 28%;
+    top: 100%;
+    background-color: transparent;
+    padding: 10px;
+    animation: coboara 0.7s ease forwards;
+    text-align: center;
+}
+.workouts-container:hover .workouts-content{
+    display: block;
+}
+
+
+.contact-container{
+    position:relative;
+    transition: transform 0.8s;
+}
+.contact-content{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: none;
+    position: absolute;
+    left: 15%;
+    top: 100%;
+    background-color: transparent;
+    padding: 10px;
+    animation: coboara 0.7s ease forwards;
+    text-align: center;
+}
+
+
+.contact-container:hover .contact-content{
+    display: block;
+    opacity: 1;
+}
+
+@keyframes coboara{
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
+@keyframes wave{
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-25px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#txt{
+
+    color:white;
+    display: flex;
+    justify-content: center;
+    margin-top: -4%;
+    bottom: 0;
+    animation: apare 1.5s ease-in;
+
+}
+#gymhub {
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 28%;
+    font-size: 100px;
+    font-weight: bold;
+    color:white;
+    animation: apare 1s ease-in, wave 3s linear infinite;
+}
+@keyframes apare {
+    0%{
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+    50%{
+        transform: translatex(-10%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+#eu{
+    color:rgb(10, 225, 245);
+    font-weight: bold;
+    text-decoration: none;
+    animation: eu 3s infinite;
+}
+#gantera {
+
+    max-width: 100px;
+    position: absolute;
+    bottom: 5%;
+    animation: moveImage 15s linear infinite;
+}
+
+@keyframes moveImage {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 93%;
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes eu{
+    0%{
+        filter:hue-rotate(0deg);
+    }
+    100%{
+        filter:hue-rotate(360deg);
+    }
+}
+
+
+
+
+@media (max-width: 60em) {
+    
+body{
+    background-color: black;
+    background-position: center;
+    background-position-y: 130px;
+    background-size: 250%;
+}
+    
+nav{
+    padding: 40px;
+    top:0;
+}
+
+.itm {
+
+    font-size: 15px;
+    margin: 0 5px;
+
+}
+
+.stim {
+
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s;
+
+}
+
+.submenu-content {
+
+    left: 10%;
+    top: 100%;
+    background-color: transparent;
+    padding: 0px;
+    animation: coboara 0.7s ease forwards;
+}
+
+.workouts-content{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: none;
+    position: absolute;
+    left: 35%;
+    top: 100%;
+    background-color: transparent;
+    padding: 0px;
+    animation: coboara 0.7s ease forwards;
+    text-align: center;
+}
+
+@keyframes coboara{
+    0% { opacity: 0; 
+        transform: translateY(-5px); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+.contact-content{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: none;
+    position: absolute;
+    left: 15%;
+    top: 100%;
+    background-color: transparent;
+    padding: 0px;
+    animation: coboara 0.7s ease forwards;
+    text-align: center;
+}
+
+@keyframes wave{
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#txt{
+    font-size: 10px;
+    color:white;
+    display: flex;
+    justify-content: center;
+    margin-top: -5%;
+    bottom: 0;
+    animation: apare 1.5s ease-in;
+
+}
+#gymhub {
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120%;
+    font-size: 45px;
+    font-weight: bold;
+    color:white;
+    animation: apare 1s ease-in, wave 3s linear infinite;
+}
+@keyframes apare {
+    0%{
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+    50%{
+        transform: translatex(-10%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+#gantera {
+
+    max-width: 30px;
+    bottom: 5%;
+}
+
+@keyframes moveImage {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 85%;
+    }
+    100% {
+        left: 0;
+    }
+}
+}
