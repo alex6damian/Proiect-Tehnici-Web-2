@@ -1,30 +1,49 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const fs = require('fs');
+const path = require('path');
 
 const app = express();
-const port = 3000;
+const PORT = 3000;
 
-// Middleware pentru a analiza cererile cu corpul de tip application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
+// Middleware
+app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Ruta pentru servirea paginii index.html
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
+// Route pentru înregistrare
+app.post('/register', (req, res) => {
+    const user = req.body;
+
+    // Citește fișierul users.json
+    fs.readFile('L11users.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error('Eroare la citirea fișierului:', err);
+            res.status(500).send('Eroare server.');
+            return;
+        }
+
+        let users = [];
+        if (data) {
+            users = JSON.parse(data);
+        }
+
+        // Adaugă noul utilizator
+        users.push(user);
+
+        // Scrie înapoi în fișier
+        fs.writeFile('L11users.json', JSON.stringify(users, null, 2), (err) => {
+            if (err) {
+                console.error('Eroare la scrierea fișierului:', err);
+                res.status(500).send('Eroare server.');
+                return;
+            }
+
+            res.status(200).send({ message: 'Utilizator creat cu succes.' });
+        });
+    });
 });
 
-// Ruta pentru a primi datele de la formular (POST request)
-app.post('/submit', (req, res) => {
-  const nume = req.body.nume;
-  const email = req.body.email;
-
-  // Afișează datele primite în consolă
-  console.log(`Nume: ${nume}, Email: ${email}`);
-
-  // Trimite un răspuns către client
-  res.send('Date primite cu succes!');
-});
-
-// Pornirea serverului
-app.listen(port, () => {
-  console.log(`Serverul ascultă la adresa http://localhost:${port}`);
+// Pornire server
+app.listen(PORT, () => {
+    console.log(`Serverul rulează la http://localhost:${PORT}`);
 });

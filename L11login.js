@@ -27,3 +27,7 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
 			console.error("Erorr: ", error);
 		});
 });
+
+document.getElementById("register").addEventListener("click", function() {
+	window.location.href = "/reg.html";
+});

@@ -1,7 +1,27 @@
 body{
-    background-image: url('404-error.png');
-    background-size: 90%;
-    background-position-y:10%;
-    background-position-x: 10%;
+    margin:5%;
+    background-color: wheat;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titlu{
+    font-size: 70px;
+    color: white;
+    text-shadow: 2px 2px 0 black, -2px -2px 0 black, -2px 2px 0 black, 2px -2px 0 black;
+    text-align: center;
+    top:7%;
+}
+
+.pag{
+    font-size: 30px;
+    color: white;
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
+    text-align: center;
+}
+
+.eroare{
+    width: 35%;
+    height: 35%;
+    margin-left: 32.5%;
+    margin-top: 2%;
 }
