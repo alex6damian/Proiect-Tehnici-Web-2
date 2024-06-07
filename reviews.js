@@ -56,6 +56,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const txt=document.getElementById("welcome");
+    const username=sessionStorage.getItem("username");
+    txt.innerHTML="Welcome, " + username+"!";
+
+});
+document.getElementById("logout-button").addEventListener("click",function(){
+    window.location.href = "/contact.html";
+});
+
 // stilizare buton
 document.addEventListener("DOMContentLoaded", function() {
     const button = document.getElementById("buton");

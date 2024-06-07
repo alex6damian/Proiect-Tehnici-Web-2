@@ -148,3 +148,4 @@ document.getElementById("formular").addEventListener("submit", function(event) {
       alert('Thanks for subscribing!');
     }
   });
+  
