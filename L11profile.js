@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 	}
 	else
 	{
-		window.location.href = "/L11index.html";
+		window.location.href = "/login.html";
 	}
 
 	document.getElementById("logout-button").addEventListener("click", () => {

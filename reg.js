@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
 });
 
+
 document.addEventListener("DOMContentLoaded", function() {
     
     const button = document.getElementById("buton");    
@@ -27,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
 document.addEventListener("DOMContentLoaded", function() {
     var textbox = document.getElementById("username");
     textbox.style.width = "300px";
@@ -37,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
     textbox.style.fontSize = "16px";
     textbox.style.backgroundColor = "#f0f0f0";
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -76,13 +79,14 @@ document.getElementById('register-form').addEventListener('submit', function(eve
     .then(data => {
         alert('Account created!');
         setTimeout(function () {
-            window.location.href = "/reviews.html";
+            window.location.href = 'reviews.html';
         }, 500);
     })
     .catch((error) => {
         console.error('Error:', error);
     });
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
 

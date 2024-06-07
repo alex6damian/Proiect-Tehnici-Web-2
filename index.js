@@ -14,8 +14,10 @@ function afiseazaOra() {
 
 document.getElementById("ora").style.color = "white";
 
+// apel functie afisOra
 document.addEventListener("DOMContentLoaded", afiseazaOra);
 
+// stilizare box de ora
 document.addEventListener("DOMContentLoaded", function() {
 
     const oraCurenta=document.getElementById("oraCurenta");
@@ -35,8 +37,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+
+// update la o secudnda
 setInterval(afiseazaOra, 1000);
 
+// highlight titlu
 document.addEventListener("DOMContentLoaded", function() {
 
     const workouts=document.getElementById("gymhub");
@@ -50,11 +55,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+// oprire event
 document.getElementById("gantera").addEventListener("click", function(event) {
     event.stopPropagation();
 });
 
-
+// stilizare ora folosind getComputedStyle
 document.addEventListener("DOMContentLoaded", function() {
 
     const element=document.getElementById("eu");
@@ -67,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
     formular.style.animation=window.getComputedStyle(document.getElementById("txt")).animation;
 });
 
-
+// stilizare formular
 document.addEventListener("DOMContentLoaded", function() {
     const formular=document.getElementById("formular");
     formular.style.position="absolute";
@@ -78,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
     formular.style.fontSize="15px";
 });
 
+// stilizare buton
 document.addEventListener("DOMContentLoaded", function() {
     const button = document.getElementById("buton");
 
@@ -118,23 +125,23 @@ document.addEventListener("DOMContentLoaded", function() {
     textbox.style.backgroundColor = "#f0f0f0";
 });
 
-
+// regex formular mail
 document.getElementById("formular").addEventListener("submit", function(event) {
-    event.preventDefault(); // Oprește comportamentul implicit al trimiterii formularului
+    event.preventDefault();
 
     const email = document.getElementById("email").value;
-    // Expresie regulată pentru un email valid
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    // Mesaje de eroare
+
     let mesajeEroare = '';
 
-    // Verifică adresa de email
+
     if (!emailRegex.test(email)) {
       mesajeEroare += 'Invalid email adress.\n';
     }
 
-    // Afișează mesajele de eroare sau trimite datele către server
+
     if (mesajeEroare) {
       alert(mesajeEroare);
     } else {

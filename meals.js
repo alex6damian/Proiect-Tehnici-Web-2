@@ -8,6 +8,7 @@ circles.forEach(circle=>{
 const txt=document.getElementById('nig');
 txt.style.fontSize='20px'; // modificare dom
 
+//stilizare si adaugare text
 document.getElementById('createButton').addEventListener('click', function(){
     const container=document.getElementById('welcome');
     if(container.childElementCount<2){
@@ -20,6 +21,7 @@ document.getElementById('createButton').addEventListener('click', function(){
 }
 })
 
+//stergem textuls
 document.getElementById('deleteButton').addEventListener('click',function(){
     const container=document.getElementById('welcome');
     if(container.childElementCount>1){
@@ -27,12 +29,14 @@ document.getElementById('deleteButton').addEventListener('click',function(){
     }
 })
 
+//event la tastatura
 document.addEventListener('keydown', function(event) {
     if (event.code === 'Space') {
         alert('Stop pressing the spacebar!');
     }
 });
 
+//hover butoane
 document.addEventListener("DOMContentLoaded", function() {
     
     const button = document.getElementById("createButton");    
@@ -59,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+//adaugare highlight cu classList
 document.addEventListener("DOMContentLoaded", function() {
 
     const workouts=document.getElementById("meals");

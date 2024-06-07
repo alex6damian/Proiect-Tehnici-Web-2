@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
 });
 
-
+// stilizare textbox username
 document.addEventListener("DOMContentLoaded", function() {
     var textbox = document.getElementById("username");
     textbox.style.width = "300px";
@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
     textbox.style.backgroundColor = "#f0f0f0";
 });
 
+// stilizare textbox pw
 document.addEventListener("DOMContentLoaded", function() {
 
     var textbox = document.getElementById("password");
@@ -58,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+// stilizare hover buton
 document.addEventListener("DOMContentLoaded", function() {
     
     const button = document.getElementById("buton");    
@@ -71,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// hover buton register
 document.addEventListener("DOMContentLoaded", function() {
     
     const button = document.getElementById("register");    
@@ -84,9 +87,46 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// centrare text
 document.addEventListener("DOMContentLoaded", function() {
 
     const txt= document.getElementById("titlu");
     txt.classList.add("centered-text");
 
+});
+
+// sesiune de login
+document.getElementById("login-form").addEventListener("submit", function (e) {
+	e.preventDefault();
+
+	const username = document.getElementById("username").value;
+	const password = document.getElementById("password").value;
+
+	fetch("L11users.json")
+		.then ((response) => response.json())
+		.then ((users) => {
+			const userExists = users.some(
+				(user) => user.username === username && user.password === password
+			);
+
+			if(userExists) {
+				sessionStorage.setItem("username", username);
+				alert("Logged in successfully!");
+				setTimeout(function () {
+					window.location.href = "/reviews.html";
+				}, 500);
+			}
+			else
+			{
+				window.location.href = "/L11404.html";
+			}
+		})
+		.catch((error) => {
+			console.error("Erorr: ", error);
+		});
+});
+
+// deschide reg.html
+document.getElementById("register").addEventListener("click", function() {
+	window.location.href = "/reg.html";
 });
